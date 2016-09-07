@@ -1,0 +1,9 @@
+[submodule "src/vasm"]
+	path = src/vasm
+	url = http://github.com/leffmann/vasm
+[submodule "src/vlink"]
+	path = src/vlink
+	url = http://github.com/leffmann/vlink
+[submodule "src/vbcc"]
+	path = src/vbcc
+	url = http://github.com/leffmann/vbcc
