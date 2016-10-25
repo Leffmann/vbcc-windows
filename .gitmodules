@@ -1,9 +1,12 @@
 [submodule "src/vasm"]
 	path = src/vasm
-	url = http://github.com/leffmann/vasm
+	url = https://github.com/leffmann/vasm
 [submodule "src/vlink"]
 	path = src/vlink
-	url = http://github.com/leffmann/vlink
+	url = https://github.com/leffmann/vlink
 [submodule "src/vbcc"]
 	path = src/vbcc
-	url = http://github.com/leffmann/vbcc
+	url = https://github.com/leffmann/vbcc
+[submodule "src/make"]
+	path = src/make
+	url = https://github.com/mirror/make
