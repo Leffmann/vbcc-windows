@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{62456E1E-A706-4A11-8A2F-E589106D1895}</ProjectGuid>
+    <ProjectGuid>{89FCDE9E-B6B6-4BF8-A0F5-DE3AC1605C7F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>vbccm68k</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -89,7 +89,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>NO_UCPP_ERROR_FUNCTIONS; WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>M68K_16BIT_INT; NO_UCPP_ERROR_FUNCTIONS; WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AdditionalIncludeDirectories>$(SolutionDir)\src; $(SolutionDir)\src\vbcc\; $(SolutionDir)\src\vbcc\machines\m68k; $(SolutionDir)$(Configuration); $(SolutionDir)\src\vbcc\datatypes</AdditionalIncludeDirectories>
@@ -100,10 +100,10 @@
       <AdditionalDependencies>notelemetry.obj; setargv.obj; kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)\archive\installation files\bin\vbccm68k.exe"</Command>
+      <Command>copy /Y "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)\archive\installation files\bin\vbccm68ks.exe"</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>copy /Y "$(SolutionDir)\src\dt_m68k.c" "$(SolutionDir)\src\dt.c"  &amp;&amp;  copy /Y "$(SolutionDir)\src\dt_m68k.h" "$(SolutionDir)\src\dt.h"</Command>
+      <Command>copy /Y "$(SolutionDir)\src\dt_m68ks.c" "$(SolutionDir)\src\dt.c"  &amp;&amp;  copy /Y "$(SolutionDir)\src\dt_m68ks.h" "$(SolutionDir)\src\dt.h"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -127,7 +127,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NO_UCPP_ERROR_FUNCTIONS; WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>M68K_16BIT_INT; NO_UCPP_ERROR_FUNCTIONS; WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)\build; $(SolutionDir)\src\vbcc\; $(SolutionDir)\src\vbcc\machines\m68k; $(SolutionDir)$(Configuration); $(SolutionDir)\src\vbcc\datatypes</AdditionalIncludeDirectories>
       <OmitFramePointers>true</OmitFramePointers>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -141,7 +141,7 @@
       <AdditionalDependencies>notelemetry.obj; setargv.obj; kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>copy /Y "$(SolutionDir)\src\dt_m68k.h" "$(SolutionDir)\build\dt.h"</Command>
+      <Command>copy /Y "$(SolutionDir)\src\dt_m68ks.h" "$(SolutionDir)\build\dt.h"</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -169,10 +169,10 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="vbccm68k.rc" />
+    <ResourceCompile Include="vbccm68ks.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\dt_m68k.c" />
+    <ClCompile Include="..\src\dt_m68ks.c" />
     <ClCompile Include="..\src\vbcc\alias.c" />
     <ClCompile Include="..\src\vbcc\av.c" />
     <ClCompile Include="..\src\vbcc\cp.c" />

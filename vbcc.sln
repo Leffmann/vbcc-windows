@@ -15,6 +15,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vbccm68k", "vbccm68k\vbccm6
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "make", "make\make.vcxproj", "{7CAD1152-EB08-4AC6-B682-5CEC612C745E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vbccm68ks", "vbccm68ks\vbccm68ks.vcxproj", "{89FCDE9E-B6B6-4BF8-A0F5-DE3AC1605C7F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{62456E1E-A706-4A11-8A2F-E589106D1895} = {62456E1E-A706-4A11-8A2F-E589106D1895}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +76,14 @@ Global
 		{7CAD1152-EB08-4AC6-B682-5CEC612C745E}.Release|x64.Build.0 = Release|x64
 		{7CAD1152-EB08-4AC6-B682-5CEC612C745E}.Release|x86.ActiveCfg = Release|Win32
 		{7CAD1152-EB08-4AC6-B682-5CEC612C745E}.Release|x86.Build.0 = Release|Win32
+		{89FCDE9E-B6B6-4BF8-A0F5-DE3AC1605C7F}.Debug|x64.ActiveCfg = Debug|x64
+		{89FCDE9E-B6B6-4BF8-A0F5-DE3AC1605C7F}.Debug|x64.Build.0 = Debug|x64
+		{89FCDE9E-B6B6-4BF8-A0F5-DE3AC1605C7F}.Debug|x86.ActiveCfg = Debug|Win32
+		{89FCDE9E-B6B6-4BF8-A0F5-DE3AC1605C7F}.Debug|x86.Build.0 = Debug|Win32
+		{89FCDE9E-B6B6-4BF8-A0F5-DE3AC1605C7F}.Release|x64.ActiveCfg = Release|x64
+		{89FCDE9E-B6B6-4BF8-A0F5-DE3AC1605C7F}.Release|x64.Build.0 = Release|x64
+		{89FCDE9E-B6B6-4BF8-A0F5-DE3AC1605C7F}.Release|x86.ActiveCfg = Release|Win32
+		{89FCDE9E-B6B6-4BF8-A0F5-DE3AC1605C7F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

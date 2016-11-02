@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="vbccm68k.rc">
+    <ResourceCompile Include="vbccm68ks.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -100,7 +100,7 @@
     <ClCompile Include="..\src\vbcc\machines\m68k\machine.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\dt_m68k.c">
+    <ClCompile Include="..\src\dt_m68ks.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
