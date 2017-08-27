@@ -1,4 +1,5 @@
 build/
+.vs/
 vbcc.vc.db
 vbcc.vc.vc.opendb
-.vs/
+*.aps
