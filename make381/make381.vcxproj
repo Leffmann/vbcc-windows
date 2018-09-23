@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7CAD1152-EB08-4AC6-B682-5CEC612C745E}</ProjectGuid>
+    <ProjectGuid>{7CAD1152-EB08-4AC6-B682-5CEC412C745E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>make</RootNamespace>
+    <RootNamespace>make381</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -121,7 +121,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>GUILE=N; HAVE_CONFIG_H; WINDOWS32; WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\build\; $(SolutionDir)\src\make; $(SolutionDir)\src\make\glob; $(SolutionDir)\src\make\w32\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\build; $(SolutionDir)\src\make381; $(SolutionDir)\src\make381\glob; $(SolutionDir)\src\make381\w32\include</AdditionalIncludeDirectories>
       <OmitFramePointers>true</OmitFramePointers>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
@@ -135,10 +135,10 @@
       <AdditionalDependencies>notelemetry.obj; setargv.obj; kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>copy /Y $(SolutionDir)\src\config.h $(SolutionDir)\build\</Command>
+      <Command>copy /Y $(SolutionDir)\src\config381.h $(SolutionDir)\build\config.h</Command>
     </PreBuildEvent>
     <PreBuildEvent>
-      <Message>Select the config for the latest version of Make</Message>
+      <Message>Select the 3.81-specific config file</Message>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -163,49 +163,43 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="make.rc" />
+    <ResourceCompile Include="make381.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\make\ar.c" />
-    <ClCompile Include="..\src\make\arscan.c" />
-    <ClCompile Include="..\src\make\commands.c" />
-    <ClCompile Include="..\src\make\default.c" />
-    <ClCompile Include="..\src\make\dir.c" />
-    <ClCompile Include="..\src\make\expand.c" />
-    <ClCompile Include="..\src\make\file.c" />
-    <ClCompile Include="..\src\make\function.c" />
-    <ClCompile Include="..\src\make\getloadavg.c" />
-    <ClCompile Include="..\src\make\getopt.c" />
-    <ClCompile Include="..\src\make\getopt1.c" />
-    <ClCompile Include="..\src\make\glob\fnmatch.c" />
-    <ClCompile Include="..\src\make\glob\glob.c" />
-    <ClCompile Include="..\src\make\guile.c" />
-    <ClCompile Include="..\src\make\hash.c" />
-    <ClCompile Include="..\src\make\implicit.c" />
-    <ClCompile Include="..\src\make\job.c" />
-    <ClCompile Include="..\src\make\load.c" />
-    <ClCompile Include="..\src\make\loadapi.c" />
-    <ClCompile Include="..\src\make\main.c" />
-    <ClCompile Include="..\src\make\misc.c" />
-    <ClCompile Include="..\src\make\output.c" />
-    <ClCompile Include="..\src\make\read.c" />
-    <ClCompile Include="..\src\make\remake.c" />
-    <ClCompile Include="..\src\make\remote-stub.c" />
-    <ClCompile Include="..\src\make\rule.c" />
-    <ClCompile Include="..\src\make\signame.c" />
-    <ClCompile Include="..\src\make\strcache.c" />
-    <ClCompile Include="..\src\make\variable.c" />
-    <ClCompile Include="..\src\make\version.c" />
-    <ClCompile Include="..\src\make\vpath.c" />
-    <ClCompile Include="..\src\make\w32\compat\dirent.c" />
-    <ClCompile Include="..\src\make\w32\compat\posixfcn.c" />
-    <ClCompile Include="..\src\make\w32\pathstuff.c" />
-    <ClCompile Include="..\src\make\w32\subproc\misc.c">
+    <ClCompile Include="..\src\make381\ar.c" />
+    <ClCompile Include="..\src\make381\arscan.c" />
+    <ClCompile Include="..\src\make381\commands.c" />
+    <ClCompile Include="..\src\make381\default.c" />
+    <ClCompile Include="..\src\make381\dir.c" />
+    <ClCompile Include="..\src\make381\expand.c" />
+    <ClCompile Include="..\src\make381\file.c" />
+    <ClCompile Include="..\src\make381\function.c" />
+    <ClCompile Include="..\src\make381\getloadavg.c" />
+    <ClCompile Include="..\src\make381\getopt.c" />
+    <ClCompile Include="..\src\make381\getopt1.c" />
+    <ClCompile Include="..\src\make381\glob\fnmatch.c" />
+    <ClCompile Include="..\src\make381\glob\glob.c" />
+    <ClCompile Include="..\src\make381\hash.c" />
+    <ClCompile Include="..\src\make381\implicit.c" />
+    <ClCompile Include="..\src\make381\job.c" />
+    <ClCompile Include="..\src\make381\main.c" />
+    <ClCompile Include="..\src\make381\misc.c" />
+    <ClCompile Include="..\src\make381\read.c" />
+    <ClCompile Include="..\src\make381\remake.c" />
+    <ClCompile Include="..\src\make381\remote-stub.c" />
+    <ClCompile Include="..\src\make381\rule.c" />
+    <ClCompile Include="..\src\make381\signame.c" />
+    <ClCompile Include="..\src\make381\strcache.c" />
+    <ClCompile Include="..\src\make381\variable.c" />
+    <ClCompile Include="..\src\make381\version.c" />
+    <ClCompile Include="..\src\make381\vpath.c" />
+    <ClCompile Include="..\src\make381\w32\compat\dirent.c" />
+    <ClCompile Include="..\src\make381\w32\pathstuff.c" />
+    <ClCompile Include="..\src\make381\w32\subproc\misc.c">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)\misc2.obj</ObjectFileName>
     </ClCompile>
-    <ClCompile Include="..\src\make\w32\subproc\sub_proc.c" />
-    <ClCompile Include="..\src\make\w32\subproc\w32err.c" />
-    <ClCompile Include="..\src\make\w32\w32os.c" />
+    <ClCompile Include="..\src\make381\w32\subproc\sub_proc.c" />
+    <ClCompile Include="..\src\make381\w32\subproc\w32err.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -10,3 +10,6 @@
 [submodule "src/make"]
 	path = src/make
 	url = https://github.com/mirror/make
+[submodule "src/make381"]
+	path = src/make381
+	url = https://github.com/mirror/make
