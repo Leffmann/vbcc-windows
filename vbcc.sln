@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "make381", "make381\make381.
 		{7CAD1152-EB08-4AC6-B682-5CEC612C745E} = {7CAD1152-EB08-4AC6-B682-5CEC612C745E}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vasmm68k_madmac", "vasmm68k_madmac\vasmm68k_madmac.vcxproj", "{060AB262-BFFF-4482-879D-B5D92A2E1B56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -97,6 +99,14 @@ Global
 		{7CAD1152-EB08-4AC6-B682-5CEC412C745E}.Release|x64.Build.0 = Release|x64
 		{7CAD1152-EB08-4AC6-B682-5CEC412C745E}.Release|x86.ActiveCfg = Release|Win32
 		{7CAD1152-EB08-4AC6-B682-5CEC412C745E}.Release|x86.Build.0 = Release|Win32
+		{060AB262-BFFF-4482-879D-B5D92A2E1B56}.Debug|x64.ActiveCfg = Debug|x64
+		{060AB262-BFFF-4482-879D-B5D92A2E1B56}.Debug|x64.Build.0 = Debug|x64
+		{060AB262-BFFF-4482-879D-B5D92A2E1B56}.Debug|x86.ActiveCfg = Debug|Win32
+		{060AB262-BFFF-4482-879D-B5D92A2E1B56}.Debug|x86.Build.0 = Debug|Win32
+		{060AB262-BFFF-4482-879D-B5D92A2E1B56}.Release|x64.ActiveCfg = Release|x64
+		{060AB262-BFFF-4482-879D-B5D92A2E1B56}.Release|x64.Build.0 = Release|x64
+		{060AB262-BFFF-4482-879D-B5D92A2E1B56}.Release|x86.ActiveCfg = Release|Win32
+		{060AB262-BFFF-4482-879D-B5D92A2E1B56}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
