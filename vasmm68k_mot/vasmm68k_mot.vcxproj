@@ -125,7 +125,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>OUTAOUT; OUTBIN; OUTELF; OUTHUNK; OUTSREC; OUTTOS; OUTVOBJ; WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OUTXFIL; OUTAOUT; OUTBIN; OUTELF; OUTHUNK; OUTSREC; OUTTOS; OUTVOBJ; WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)\src\vasm\; $(SolutionDir)\src\vasm\cpus\m68k; $(SolutionDir)\src\vasm\syntax\mot</AdditionalIncludeDirectories>
       <OmitFramePointers>true</OmitFramePointers>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -166,9 +166,11 @@
     <ClCompile Include="..\src\vasm\atom.c" />
     <ClCompile Include="..\src\vasm\cond.c" />
     <ClCompile Include="..\src\vasm\cpus\m68k\cpu.c" />
+    <ClCompile Include="..\src\vasm\dwarf.c" />
     <ClCompile Include="..\src\vasm\error.c" />
     <ClCompile Include="..\src\vasm\expr.c" />
     <ClCompile Include="..\src\vasm\hugeint.c" />
+    <ClCompile Include="..\src\vasm\osdep.c" />
     <ClCompile Include="..\src\vasm\output_aout.c" />
     <ClCompile Include="..\src\vasm\output_bin.c" />
     <ClCompile Include="..\src\vasm\output_elf.c" />
@@ -177,6 +179,7 @@
     <ClCompile Include="..\src\vasm\output_test.c" />
     <ClCompile Include="..\src\vasm\output_tos.c" />
     <ClCompile Include="..\src\vasm\output_vobj.c" />
+    <ClCompile Include="..\src\vasm\output_xfile.c" />
     <ClCompile Include="..\src\vasm\parse.c" />
     <ClCompile Include="..\src\vasm\reloc.c" />
     <ClCompile Include="..\src\vasm\supp.c" />
