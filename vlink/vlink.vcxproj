@@ -190,6 +190,7 @@
     <ClCompile Include="..\src\vlink\t_rawbin.c" />
     <ClCompile Include="..\src\vlink\t_rawseg.c" />
     <ClCompile Include="..\src\vlink\t_vobj.c" />
+    <ClCompile Include="..\src\vlink\t_xfile.c" />
     <ClCompile Include="..\src\vlink\version.c" />
   </ItemGroup>
   <ItemGroup>
