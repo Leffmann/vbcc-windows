@@ -1,6 +1,6 @@
 /* config.h.W32 -- hand-massaged config.h file for Windows builds       -*-C-*-
 
-Copyright (C) 1996-2016 Free Software Foundation, Inc.
+Copyright (C) 1996-2020 Free Software Foundation, Inc.
 This file is part of GNU Make.
 
 GNU Make is free software; you can redistribute it and/or modify it under the
@@ -261,9 +261,6 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 /* Define to 1 if you have the 'strdup' function. */
 #define HAVE_STRDUP 1
 
-/* Define to 1 if you have the 'strerror' function. */
-#define HAVE_STRERROR 1
-
 /* Define to 1 if you have the 'stricmp' function. */
 #define HAVE_STRICMP 1
 
@@ -294,12 +291,23 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 /* Define to 1 if you have the 'strsignal' function. */
 /* #undef HAVE_STRSIGNAL */
 
+/* Define to 1 if `d_type' is a member of `struct dirent'. */
+/* SV 57152: MinGW64 version of dirent doesn't support d_type. */
+#ifndef __MINGW64__
+# define HAVE_STRUCT_DIRENT_D_TYPE 1
+#endif
+
 /* Define to 1 if you have the `isatty' function. */
 #define HAVE_ISATTY 1
 
 /* Define to 1 if you have the `ttyname' function. */
 #define HAVE_TTYNAME 1
 char *ttyname (int);
+
+/* Define to 1 if you have the `umask' function. */
+#ifdef __MINGW32__
+# define HAVE_UMASK 1
+#endif
 
 /* Define to 1 if 'n_un.n_name' is a member of 'struct nlist'. */
 /* #undef HAVE_STRUCT_NLIST_N_UN_N_NAME */
@@ -386,7 +394,7 @@ char *ttyname (int);
 #define PACKAGE_URL "http://www.gnu.org/software/make/"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "4.2.90"
+#define PACKAGE_VERSION "4.3.0"
 
 /* Define to the character that separates directories in PATH. */
 #define PATH_SEPARATOR_CHAR ';'
@@ -438,7 +446,7 @@ char *ttyname (int);
 /* #undef UMAX4_3 */
 
 /* Version number of package */
-#define VERSION "4.2.90"
+#define VERSION "4.3.0"
 
 /* Define if using the dmalloc debugging malloc package */
 /* #undef WITH_DMALLOC */
@@ -449,6 +457,10 @@ char *ttyname (int);
 #ifndef _ALL_SOURCE
 /* # undef _ALL_SOURCE */
 #endif
+
+/* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
+   significant byte first (like Motorola and SPARC, unlike Intel). */
+/* #  undef WORDS_BIGENDIAN */
 
 /* Number of bits in a file offset, on hosts where this is settable. */
 /* #undef _FILE_OFFSET_BITS */
@@ -469,6 +481,11 @@ char *ttyname (int);
 /* Define to empty if 'const' does not conform to ANSI C. */
 /* #undef const */
 
+#ifdef __MINGW32__
+# undef __USE_MINGW_ANSI_STDIO
+# define __USE_MINGW_ANSI_STDIO 1
+#endif
+
 #include <sys/types.h>
 
 /* Define to 'int' if <sys/types.h> doesn't define. */
@@ -483,6 +500,9 @@ char *ttyname (int);
 #define pid_t int
 #endif
 #endif
+
+/* Define to `int' if <sys/types.h> does not define. */
+#define ssize_t int
 
 /* Define to 'int' if <sys/types.h> doesn't define. */
 #define uid_t int

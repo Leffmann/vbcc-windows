@@ -25,118 +25,118 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\make\ar.c">
+    <ClCompile Include="..\src\make\src\w32\pathstuff.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\arscan.c">
+    <ClCompile Include="..\src\make\src\w32\w32os.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\commands.c">
+    <ClCompile Include="..\src\make\src\w32\compat\dirent.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\default.c">
+    <ClCompile Include="..\src\make\src\w32\compat\posixfcn.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\dir.c">
+    <ClCompile Include="..\src\make\src\w32\subproc\misc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\expand.c">
+    <ClCompile Include="..\src\make\src\w32\subproc\sub_proc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\file.c">
+    <ClCompile Include="..\src\make\src\w32\subproc\w32err.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\function.c">
+    <ClCompile Include="..\src\make\src\ar.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\getloadavg.c">
+    <ClCompile Include="..\src\make\src\arscan.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\getopt.c">
+    <ClCompile Include="..\src\make\src\commands.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\getopt1.c">
+    <ClCompile Include="..\src\make\src\default.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\guile.c">
+    <ClCompile Include="..\src\make\src\dir.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\hash.c">
+    <ClCompile Include="..\src\make\src\expand.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\implicit.c">
+    <ClCompile Include="..\src\make\src\file.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\job.c">
+    <ClCompile Include="..\src\make\src\function.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\load.c">
+    <ClCompile Include="..\src\make\src\getopt.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\loadapi.c">
+    <ClCompile Include="..\src\make\src\getopt1.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\main.c">
+    <ClCompile Include="..\src\make\src\hash.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\output.c">
+    <ClCompile Include="..\src\make\src\implicit.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\read.c">
+    <ClCompile Include="..\src\make\src\load.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\remake.c">
+    <ClCompile Include="..\src\make\src\loadapi.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\remote-stub.c">
+    <ClCompile Include="..\src\make\src\main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\rule.c">
+    <ClCompile Include="..\src\make\src\misc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\signame.c">
+    <ClCompile Include="..\src\make\src\output.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\strcache.c">
+    <ClCompile Include="..\src\make\src\read.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\variable.c">
+    <ClCompile Include="..\src\make\src\remake.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\version.c">
+    <ClCompile Include="..\src\make\src\remote-stub.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\vpath.c">
+    <ClCompile Include="..\src\make\src\rule.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\glob\fnmatch.c">
+    <ClCompile Include="..\src\make\src\signame.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\glob\glob.c">
+    <ClCompile Include="..\src\make\src\strcache.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\w32\compat\posixfcn.c">
+    <ClCompile Include="..\src\make\src\variable.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\w32\pathstuff.c">
+    <ClCompile Include="..\src\make\src\version.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\w32\w32os.c">
+    <ClCompile Include="..\src\make\src\vpath.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\w32\subproc\sub_proc.c">
+    <ClCompile Include="..\src\make\lib\fnmatch.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\w32\subproc\w32err.c">
+    <ClCompile Include="..\src\make\lib\glob.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\w32\compat\dirent.c">
+    <ClCompile Include="..\src\make\src\guile.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\w32\subproc\misc.c">
+    <ClCompile Include="..\src\make\src\job.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\make\misc.c">
+    <ClCompile Include="..\src\getloadavg.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
